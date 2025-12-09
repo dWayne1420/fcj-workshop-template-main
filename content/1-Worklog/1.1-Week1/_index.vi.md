@@ -1,32 +1,59 @@
 ---
-title: "Week 1 Worklog"
+title: "Worklog Tuần 1"
 date: "`r Sys.Date()`"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference only.**
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-### Week 1 Objectives:
-* Nắm mục tiêu thực tập AWS.
-* Làm quen môi trường làm việc.
-* Tìm hiểu tổng quan Cloud & AWS.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference |
-| --- | ----- | ---------- | ---------------- | --------- |
-| 1 | Định hướng thực tập, làm quen mentor & nhóm | 08/09/2025 | 08/09/2025 | |
-| 2 | Tìm hiểu chương trình FCJ, đọc nội quy | 09/09/2025 | 09/09/2025 | https://cloudjourney.awsstudygroup.com/ |
-| 3 | Ôn kiến thức Cloud: IaaS/PaaS/SaaS, Scalability | 10/09/2025 | 10/09/2025 | |
-| 4 | Tìm hiểu AWS Global Infrastructure | 11/09/2025 | 11/09/2025 | https://cloudjourney.awsstudygroup.com/ |
-| 5 | Tổng quan AWS Well-Architected Framework | 12/09/2025 | 12/09/2025 | |
-| 6 | Tổng hợp kiến thức — chuẩn bị tuần học AWS Services | 13/09/2025 | 13/09/2025 | |
+### Mục tiêu tuần 1:
 
-### Week 1 Achievements:
-* Hiểu mục tiêu & kỳ vọng thực tập.
-* Nắm tổng quan Cloud Computing & AWS Global Infrastructure.
-* Nắm được 6 trụ cột Well-Architected.
-* Sẵn sàng cho Week 2: AWS Services cơ bản.
+* Kết nối, làm quen với các thành viên trong First Cloud Journey.
+* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+
+### Các công việc cần triển khai trong tuần này:
+| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
+| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+
+### Kết quả đạt được tuần 1:
+
+* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
+  * Compute
+  * Storage
+  * Networking 
+  * Database
+  * ...
+
+* Đã tạo và cấu hình AWS Free Tier account thành công.
+
+* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+
+* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
+  * Access Key
+  * Secret Key
+  * Region mặc định
+  * ...
+
+* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+
+  * Kiểm tra thông tin tài khoản & cấu hình
+  * Lấy danh sách region
+  * Xem dịch vụ EC2
+  * Tạo và quản lý key pair
+  * Kiểm tra thông tin dịch vụ đang chạy
+  * ...
+
+* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* ...
+
+

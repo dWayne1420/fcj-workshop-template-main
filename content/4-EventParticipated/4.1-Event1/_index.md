@@ -6,34 +6,26 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-
+{{% notice warning %}}
+⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+{{% /notice %}}
 
 # Summary Report: “GenAI-powered App-DB Modernization workshop”
 
 ### Event Objectives
-- Introduce how Generative AI is transforming the software development lifecycle.
 
-- Showcase Amazon Q Developer’s capabilities in coding, testing, documentation, and architecture support.
-
-- Demonstrate how Kiro enhances DevOps and operations through log analysis, troubleshooting, and automation.
-
-- Present the AI-Driven Development model and how teams can integrate AI into daily workflows.
-
-- Provide practical demos to help participants understand how to apply these tools effectively.
+- Share best practices in modern application design
+- Introduce Domain-Driven Design (DDD) and event-driven architecture
+- Provide guidance on selecting the right compute services
+- Present AI tools to support the development lifecycle
 
 ### Speakers
 
-- **Toan Huynh** –PMP, Senior Solutions Architect (AWS)
-- **My Nguyen** – Senior Solutions Architect | Applied AI Specialist | Thought Leader
+- **Jignesh Shah** – Director, Open Source Databases
+- **Erica Liu** – Sr. GTM Specialist, AppMod
+- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
 
 ### Key Highlights
-
-- Understanding limitations such as scalability issues, high maintenance cost, tight coupling, and slow deployment cycles.
-- Limited Scalability – Hard to scale to meet growing user demand.
-
-- High Maintenance Costs – Legacy systems require more resources and effort to maintain.
-
-- Tight Coupling – Components are often interdependent, making updates risky.
 
 #### Identifying the drawbacks of legacy application architecture
 
@@ -45,113 +37,90 @@ pre: " <b> 4.1. </b> "
 
 Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
 
-- **Queue Management**: Handles asynchronous tasks reliably.Ensures smooth communication between services without blocking. 
-- **Caching Strategy**: Optimizes performance and reduces latency.Reduces repeated computations and database load.
-- **Message Handling**: Enables flexible, event-driven communication.
-Supports pub/sub, point-to-point, and streaming patterns.
-### Domain-Driven Design (DDD) – Workshop Notes
+- **Queue Management**: Handle asynchronous tasks  
+- **Caching Strategy**: Optimize performance  
+- **Message Handling**: Flexible inter-service communication  
 
-**Overview:**  
-DDD helps align software design with business needs, reducing complexity in large systems.  
-Focused on applying practical techniques during modernization using AI tools like Amazon Q Developer.
+#### Domain-Driven Design (DDD)
 
-**Four-Step Method (As presented in the workshop):**  
-- **Identify Domain Events** – Capture key business events that drive the system.  
-- **Arrange Timeline** – Map events in chronological order to understand flow.  
-- **Identify Actors** – Determine users or systems interacting with these events.  
-- **Define Bounded Contexts** – Separate the system into independent domains for clarity and scalability.
-
-**Workshop Case Study:**  
-- **Bookstore Example:**  
-  - Demonstrated real-world DDD application.  
-  - Domain events: “Order Placed”, “Payment Completed”, “Book Shipped”.  
-  - Bounded contexts: Order Management, Payment Processing, Inventory.
-
-**Context Mapping:**  
-- 7 patterns introduced for integrating bounded contexts:  
-  - Shared Kernel, Customer-Supplier, Conformist, Anticorruption Layer, Open Host Service, Published Language, Separate Ways.
-
-**Key Takeaways:**  
-- Using DDD reduces tight coupling and improves system clarity.  
-- Amazon Q Developer can assist in modeling, generating code, and documentation for bounded contexts.  
-- Context mapping ensures smooth communication between independent services during modernization.
-
+- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
+- **Bookstore case study**: Demonstrates real-world DDD application  
+- **Context mapping**: 7 patterns for integrating bounded contexts  
 
 #### Event-Driven Architecture
 
-- **Integration patterns**: Publish/Subscribe, Point-to-Point, Streaming  
-- **Benefits**: Loose coupling, scalable, resilient  
-- **Sync vs Async**: Trade-offs for performance and reliability  
+- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
+- **Benefits**: Loose coupling, scalability, resilience  
+- **Sync vs async comparison**: Understanding the trade-offs  
 
 #### Compute Evolution
 
-- **Shared Responsibility**: EC2 → ECS → Fargate → Lambda  
-- **Serverless**: No server management, auto-scaling, pay-per-use  
-- **Choosing Compute**: Functions vs Containers based on workload  
+- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
+- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
+- **Functions vs Containers**: Criteria for appropriate choice  
 
 #### Amazon Q Developer
 
-- Automates **SDLC tasks**: planning → coding → testing → deployment → maintenance  
-- Supports **code transformation**: Java upgrades, .NET modernization  
-- Works with **AWS Transform agents**: VMware, Mainframe, .NET migrations  
+- **SDLC automation**: From planning to maintenance  
+- **Code transformation**: Java upgrade, .NET modernization  
+- **AWS Transform agents**: VMware, Mainframe, .NET migration  
 
 ### Key Takeaways
 
 #### Design Mindset
 
-- **Business-first approach**: Start from business needs  
-- **Ubiquitous language**: Shared vocabulary between business & tech  
-- **Bounded contexts**: Manage complexity in large systems  
+- **Business-first approach**: Always start from the business domain, not the technology  
+- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
+- **Bounded contexts**: Identifying and managing complexity in large systems  
 
 #### Technical Architecture
 
-- **Event storming**: Model business processes effectively  
-- Use **event-driven communication** to reduce tight coupling  
-- **Integration patterns**: Apply sync, async, pub/sub, streaming as needed  
-- **Compute selection**: Decide between VM, containers, or serverless based on use case
-
+- **Event storming technique**: Practical method for modeling business processes  
+- Use **event-driven communication** instead of synchronous calls  
+- **Integration patterns**: When to use sync, async, pub/sub, streaming  
+- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
 
 #### Modernization Strategy
 
-- **Phased Approach**: Follow a clear roadmap, avoid rushing  
-- **7Rs Framework**: Multiple modernization paths depending on application  
-- **ROI Measurement**: Focus on cost reduction and business agility  
+- **Phased approach**: No rushing — follow a clear roadmap  
+- **7Rs framework**: Multiple modernization paths depending on the application  
+- **ROI measurement**: Cost reduction + business agility  
 
 ### Applying to Work
 
-- **Apply DDD**: Event storming sessions with business teams  
-- **Refactor Microservices**: Use bounded contexts to define service boundaries  
-- **Implement Event-Driven Patterns**: Replace some synchronous calls with async messaging  
-- **Adopt Serverless**: Pilot AWS Lambda where suitable  
-- **Try Amazon Q Developer**: Integrate into dev workflow to boost productivity  
+- **Apply DDD** to current projects: Event storming sessions with business teams  
+- **Refactor microservices**: Use bounded contexts to define service boundaries  
+- **Implement event-driven patterns**: Replace some sync calls with async messaging  
+- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
+- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
 
 ### Event Experience
 
-**Learning from Speakers**  
-- Gained best practices in modern application design from AWS and tech experts  
-- Understood real-world application of DDD and Event-Driven Architecture  
+Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
 
-**Hands-On Exposure**  
-- Event storming sessions helped model business processes into domain events  
-- Learned splitting microservices and defining bounded contexts  
-- Explored sync vs async communication patterns, including pub/sub, point-to-point, streaming  
+#### Learning from highly skilled speakers
+- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
+- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
 
-**Leveraging Tools**  
-- Explored **Amazon Q Developer** for SDLC automation from planning to maintenance  
-- Automated code transformation and piloted serverless with **AWS Lambda**
-  
+#### Hands-on technical exposure
+- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
+- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
+- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
 
-#### Networking and Discussions
-- Opportunities to exchange ideas with experts, peers, and business teams  
-- Enhanced **ubiquitous language** between business and tech  
-- Real-world examples highlighted the **business-first approach**  
+#### Leveraging modern tools
+- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
+- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
 
-#### Lessons Learned
-- DDD + Event-Driven patterns reduce **coupling** and improve **scalability** and **resilience**  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing is risky  
-- AI tools like **Amazon Q Developer** can **boost productivity** when integrated into workflows  
+#### Networking and discussions
+- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
+- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
 
-#### Event Photos
-*Add your event photos here*
+#### Lessons learned
+- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
+- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
+- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
 
-> Overall, the workshop provided technical knowledge and reshaped thinking on application design, system modernization, and cross-team collaboration.
+#### Some event photos
+*Add your event photos here*  
+
+> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

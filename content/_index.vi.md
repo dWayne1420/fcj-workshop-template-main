@@ -7,13 +7,13 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Lê Phan Trường Giang
+&emsp; **Họ và tên:** Nguyễn Văn A
 
-&emsp; **Số điện thoại:** 0812279197
+&emsp; **Số điện thoại:** 0989888999
 
-&emsp; **Email:** gianglptse180657@fpt.edu.vn
+&emsp; **Email:** Anguyenvan@gmail.com
 
-&emsp; **Trường:** Trường Đại Học FPT TP.HCM
+&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
 
 &emsp; **Ngành:** Công nghệ thông tin
 

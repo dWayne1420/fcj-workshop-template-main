@@ -11,165 +11,105 @@ pre: " <b> 2. </b> "
 
 In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# SportShop E-Commerce Platform  
-## A Cost-Optimized AWS Three-Tier Architecture for Online Sports Retail  
+# IoT Weather Platform for Lab Research
+## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
 
----
+### 1. Executive Summary
+The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
 
-### 1. Executive Summary  
-The SportShop E-Commerce Platform is designed to modernize online retail operations using a simplified and cost-optimized AWS architecture, suitable for student projects and small-scale applications. The system uses ReactJS for the frontend, Spring Boot for the backend, and Amazon RDS MySQL for persistent data storage.
+### 2. Problem Statement
+### What’s the Problem?
+Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-To reduce cost and complexity, the architecture removes Amazon Cognito, the Application Load Balancer (ALB), NAT Gateway, and banking payment integration. User authentication is handled directly by the backend, which runs on **Elastic Beanstalk single-instance mode**, while static content is delivered through **S3 + CloudFront**.
+### The Solution
+The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
 
-Despite being simplified, the architecture still follows AWS best practices for security and CI/CD using ACM, Parameter Store, CloudWatch, CodePipeline, and CodeBuild.
+### Benefits and Return on Investment
+The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
 
----
-
-### 2. Problem Statement  
-
-#### Current Problems  
-- Slow, manual, and inconsistent deployment workflows  
-- Risk of leaked or improperly stored credentials  
-- Limited system monitoring and alerting  
-- High chance of downtime during updates  
-
-#### Proposed Solution  
-The platform leverages AWS managed services to automate deployments, enhance security, and implement a clean three-layer architecture:
-
-- **Edge:** Route 53, CloudFront (ACM)  
-- **Application:** Elastic Beanstalk (single-instance)  
-- **Data:** RDS MySQL, S3, CloudWatch  
-
-Secrets such as database credentials and JWT signing keys are securely stored in **Parameter Store**.  
-CI/CD is managed through GitLab → CodePipeline → CodeBuild.
-
-#### Benefits  
-- Lower AWS cost and reduced architectural complexity  
-- Faster deployments through automation  
-- Global HTTPS delivery through CloudFront  
-- Clear separation between frontend, backend, and database layers  
-
----
-
-### 3. Solution Architecture  
-
-#### AWS Services Used  
-- **Amazon Route 53** — DNS  
-- **Amazon CloudFront** — CDN and HTTPS distribution  
-- **AWS Certificate Manager** — SSL/TLS certificates  
-- **Elastic Beanstalk (Single Instance)** — Backend hosting  
-- **Amazon RDS MySQL** — Main database  
-- **Amazon S3** — Static hosting & media storage  
-- **Parameter Store** — Secure secret management  
-- **CloudWatch** — Logs and metrics  
-- **CodePipeline + CodeBuild** — CI/CD automation  
-
-#### Layered Architecture  
-
-**Edge Layer**  
-- Route 53 → CloudFront  
-- CloudFront serves the ReactJS frontend globally over HTTPS  
-
-**Application Layer**  
-- Spring Boot backend deployed on Elastic Beanstalk single-instance  
-- Authentication handled with JWT  
-- Secure configuration loaded from Parameter Store  
-
-**Data Layer**  
-- RDS MySQL stores structured application data  
-- S3 stores static content and media files  
-- CloudWatch provides centralized monitoring  
-
----
+### 3. Solution Architecture
+The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
 ![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
 
 ![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
 
+### AWS Services Used
+- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
+- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
+- **Amazon API Gateway**: Facilitates web app communication.
+- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
+- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
+- **AWS Amplify**: Hosts the Next.js web interface.
+- **Amazon Cognito**: Secures access for lab users.
 
-### 4. Technical Implementation  
+### Component Design
+- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
+- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
+- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
+- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
+- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
+- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
 
-- Configure VPC, subnets, and security groups  
-- Host frontend on S3 + CloudFront  
-- Deploy backend with Elastic Beanstalk  
-- Provision RDS MySQL  
-- Store secrets in Parameter Store  
-- CI/CD pipeline: GitLab → CodePipeline → CodeBuild  
-- Enable monitoring via CloudWatch  
+### 4. Technical Implementation
+**Implementation Phases**
+This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
+- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
+- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
+- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
+- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Tech Stack:**  
-- **Frontend:** ReactJS (S3 + CloudFront)  
-- **Backend:** Spring Boot (Java 17)  
-- **Database:** Amazon RDS MySQL  
-- **CI/CD:** AWS CodePipeline, CodeBuild  
-- **Security:** IAM, ACM, Parameter Store, CloudWatch  
+**Technical Requirements**
+- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
+- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
 
----
+### 5. Timeline & Milestones
+**Project Timeline**
+- Pre-Internship (Month 0): 1 month for planning and old station review.
+- Internship (Months 1-3): 3 months.
+    - Month 1: Study AWS and upgrade hardware.
+    - Month 2: Design and adjust architecture.
+    - Month 3: Implement, test, and launch.
+- Post-Launch: Up to 1 year for research.
 
-### 5. Timeline & Milestones  
+### 6. Budget Estimation
+You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
+Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
-#### Month 1  
-- Set up AWS environment (VPC, RDS, S3, CloudFront, Route 53)  
-- Deploy backend & frontend  
-- Configure CI/CD pipeline  
+### Infrastructure Costs
+- AWS Services:
+    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
+    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
+    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
+    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
+    - Amazon API Gateway: $0.01/month (2,000 requests).
+    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
+    - AWS Glue Crawlers: $0.07/month (1 crawler).
+    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
 
-#### Month 2  
-- Implement JWT authentication  
-- Develop modules: product, order, user management  
-- Set up monitoring & alerting  
+Total: $0.7/month, $8.40/12 months
 
-#### Month 3  
-- Testing and optimization  
-- Final deployment  
-- Documentation and training  
+- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
 
----
+### 7. Risk Assessment
+#### Risk Matrix
+- Network Outages: Medium impact, medium probability.
+- Sensor Failures: High impact, low probability.
+- Cost Overruns: Medium impact, low probability.
 
-### 6. Budget Estimation  
-You can see the cost on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)
-Or download the [budget estimate file](../attachments/budget_estimation.pdf).
+#### Mitigation Strategies
+- Network: Local storage on Raspberry Pi with Docker.
+- Sensors: Regular checks and spares.
+- Cost: AWS budget alerts and optimization.
 
-| AWS Service | Monthly Cost |
-|-------------|--------------|
-| Amazon RDS MySQL | $21.84 |
-| Elastic Beanstalk (EC2 t3.micro) | $11.68 |
-| Amazon S3 | $0.26 |
-| Data Transfer | $0.60 |
-| CloudFront | $0.88 |
-| Route 53 | $0.90 |
-| ACM Public Certificate | $0 |
-| CloudWatch Metrics | $3.02 |
-| CodePipeline | $0 |
-| CodeBuild | $0.50 |
-| Parameter Store | $0 |
-| CloudWatch Logs | $1.41 |
+#### Contingency Plans
+- Revert to manual methods if AWS fails.
+- Use CloudFormation for cost-related rollbacks.
 
-**Estimated total:** ~$35–40 per month  
-**Yearly:** ~$420–480  
-
----
-
-### 7. Risk Assessment  
-
-#### Risks  
-- Single-instance backend → No fault tolerance  
-- No NAT Gateway → Backend cannot call external APIs  
-- Risk of JWT token misuse without proper security  
-
-#### Mitigation  
-- Enable Elastic Beanstalk auto-recovery and health checks  
-- Apply secure authentication & token handling practices  
-- Utilize RDS automated backups and snapshots  
-
----
-
-### 8. Future Enhancements  
-
-1. **Amazon Cognito** — MFA, OAuth, Social Login  
-2. **Application Load Balancer** — Multi-instance scaling & high availability  
-3. **NAT Gateway** — Allow backend to call external APIs  
-4. **Payment Integrations:** VNPay, Stripe, PayPal  
-5. **RDS Multi-AZ** — High availability and automatic failover  
-6. **S3 Lifecycle + Glacier** — Cost-optimized long-term storage  
-7. **AWS X-Ray + OpenSearch** — Tracing and advanced logging  
-8. **Microservices Architecture with ECS/EKS** — Scale backend into multiple services 
+### 8. Expected Outcomes
+#### Technical Improvements: 
+Real-time data and analytics replace manual processes.  
+Scalable to 10-15 stations.
+#### Long-term Value
+1-year data foundation for AI research.  
+Reusable for future projects.

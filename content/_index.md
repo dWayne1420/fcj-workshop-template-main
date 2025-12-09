@@ -13,13 +13,13 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Le Phan Truong Giang
+&emsp; **Full Name:** Nguyen Van A
 
-&emsp; **Phone Number:** 0812279197 
+&emsp; **Phone Number:** 0989888999 
 
-&emsp; **Email:** gianglptse180657@fpt.edu.vn
+&emsp; **Email:** Anguyenvan@gmail.com
 
-&emsp; **University:** FPT University Ho Chi Minh City
+&emsp; **University:** Ho Chi Minh City University of Technology and Education
 
 &emsp; **Major:** Information Technology
 
