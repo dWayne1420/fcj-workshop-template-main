@@ -1,27 +1,23 @@
 ---
 title: "Internship Report"
 date: "`r Sys.Date()`"
-weight: 1
+weight: 0
 chapter: false
 ---
 
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Student Information:
-&emsp; **Full Name:** Le Phan Truong Giang
+&emsp; **Full Name:** Tran Hong Duong
 
-&emsp; **Phone Number:** 0812279197 
+&emsp; **Phone Number:** 0336878898 
 
-&emsp; **Email:** gianglptse180657@fpt.edu.vn
+&emsp; **Email:** duongthse180648@fpt.edu.vn
 
 &emsp; **University:** FPT University Ho Chi Minh City
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Software Engineer
 
 &emsp; **Class:** AWS082025
 
@@ -29,9 +25,9 @@ chapter: false
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 09/09/2025 to 12/09/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture]()
 
 ### Report Content
 
