@@ -1,11 +1,9 @@
 ---
 title: "Event 3"
-date: 2025-11-15T08:30:18+07:00
+date: 2025-11-15
 draft: true
+pre: " <b> 4.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The content below is rewritten for reference. Please **do not copy it verbatim** into your final report.
-{{% /notice %}}
 
 # Summary Report: “AI/ML/GenAI on AWS – Workshop for Intern Students”
 

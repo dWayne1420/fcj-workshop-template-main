@@ -1,12 +1,9 @@
 ---
 title: "Event 3"
-date: 2025-11-15T08:30:18+07:00
+date: 2025-11-15
 draft: true
+pre: " <b> 4.3. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Nội dung dưới đây được viết lại để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo cuối cùng.
-{{% /notice %}}
 
 # Báo cáo Tóm tắt: “AI/ML/GenAI on AWS – Workshop dành cho sinh viên thực tập”
 

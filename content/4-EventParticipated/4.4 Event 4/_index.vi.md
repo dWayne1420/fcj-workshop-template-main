@@ -1,12 +1,9 @@
 ---
 title: "Event4"
-date: 2025-11-29T08:30:00+07:00
+date: 2025-11-17
 draft: true
+pre: " <b> 4.4. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Nội dung dưới đây được viết lại để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo cuối cùng.
-{{% /notice %}}
 
 # Báo cáo Tóm tắt: “Cloud Mastery Series #2: DevOps on AWS”
 

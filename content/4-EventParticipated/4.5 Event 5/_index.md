@@ -1,14 +1,9 @@
 ---
 title: "Event5"
-date: 2025-11-29T08:30:00+07:00
+date: 2025-11-29
 weight: 1
 chapter: false
-pre: " <b> 4.2. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
 # Summary Report: “AWS Well-Architected – Security Pillar Workshop”
 
@@ -18,12 +13,6 @@ pre: " <b> 4.2. </b> "
 - Learn best practices for IAM, detection, data protection, and incident response  
 - Explore prevention strategies for cloud threats commonly seen in Vietnam  
 - Practice real-world simulations including IAM policy validation and detection workflows  
-
-### Event Details
-
-- **Date:** 29/11/2025 (Morning)  
-- **Time:** 08:30 AM – 12:00 PM  
-- **Location:** AWS Vietnam Office  
 
 
 ##  Security Foundation
