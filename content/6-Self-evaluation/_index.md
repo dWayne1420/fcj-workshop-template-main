@@ -18,7 +18,7 @@ During my work and studies, I always strive to learn and perform my tasks to the
 | 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ☐    |   ☐  | ✅       |
 | 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ☐    | ✅    | ☐       |
 | 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ✅    |  ☐      |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    |     | ☐       | ✅      |
+| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    |      ☐       | ✅      |
 | 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    |   ☐  | ✅       |
 | 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ☐    | ✅    | ☐       |
 | 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ☐    | ✅    | ☐       |
