@@ -1,7 +1,7 @@
 ---
 title: "Event 2"
-date: "`r Sys.Date()`"
-weight: 2
+date: "2025-11-19"
+weight: 4
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
