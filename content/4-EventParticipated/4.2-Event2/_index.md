@@ -1,126 +1,152 @@
 ---
-title: "Event 2"
-date: "`r Sys.Date()`"
-weight: 1
-chapter: false
-pre: " <b> 4.2. </b> "
+title: "Event2"
+date: 2025-12-09T19:29:15+07:00
+draft: true
 ---
+
 
 {{% notice warning %}}
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: “Defense from Public Threat: AWS WAF & Application Protection”
 
 ### Event Objectives
-
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Provide an overview of common security risks faced by public-facing applications.
+- Explain how AWS WAF operates, how to design effective rule groups, and how to mitigate false positives.
+- Demonstrate AWS WAF Bot Control for identifying and blocking malicious automation.
+- Introduce AWS Shield’s DDoS defense layers and recent enhancements such as bundled flat-rate pricing.
+- Help attendees understand how to build a layered protection model using Route 53, CloudFront, WAF, and Shield.
 
 ### Speakers
+- **AWS Security Specialists** – experts focused on application and network security (names not disclosed in the provided materials).
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+---
 
-### Key Highlights
+# Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+### Understanding modern internet threats
+- Public endpoints expose applications to high-frequency attacks that may cause downtime, cost spikes, and compliance issues.
+- Consequences include increased infrastructure consumption, data leakage, credential stuffing, and degraded customer trust.
+- Threat categories include:
+  - **DoS/DDoS attacks** across L3/L4 infrastructure and L7 application traffic.
+  - **Application-level vulnerabilities**, including common CVEs and OWASP Top 10 patterns.
+  - **Bot activities**, from scraping to credential abuse, with rapid growth in **AI-powered bots** (e.g., GPT, Claude, Meta AI).
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+### Escalating attack trends
+- Recent data shows a continual rise in DDoS frequency year over year.
+- AI-based clients significantly increase automated and unpredictable traffic patterns.
+- Timelines from 2021–2025 illustrate more frequent and more sophisticated attack behavior.
 
-#### Transitioning to modern application architecture – Microservices
+---
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+# Architecture & Protection Strategies
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+### Reinforcing perimeter security using AWS services
+- **Amazon Route 53**: Resilient DNS with global redundancy and built-in DDoS protections.
+- **Amazon CloudFront**:
+  - Acts as a reverse proxy, terminating TLS at edge PoPs.
+  - Blocks attacks early at the edge and reduces backend load.
+  - Supports private VPC origin mode to hide ALB/EC2 from the public internet.
 
-#### Domain-Driven Design (DDD)
+### AWS Shield (Standard & Advanced)
+- Shield provides network-layer filtering, SYN/UDP protection, and health-based traffic mitigation.
+- Shield Advanced adds:
+  - Automated L7 rule creation
+  - Cost protection against scaling surges during attacks
+  - Support from the Shield Response Team (SRT)
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+### New CloudFront Flat-Rate Bundles
+- Fixed monthly pricing tiers (Free, Pro, Business, Premium), each bundling CDN + WAF + DDoS + DNS + logging + edge compute.
+- Enables predictable budgeting, eliminates surprise bills from unexpected traffic spikes.
+- Attack traffic (WAF-blocked or DDoS) **does not count** toward usage quotas.
 
-#### Event-Driven Architecture
+---
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+# AWS WAF Deep Dive
 
-#### Compute Evolution
+### How WAF works
+- Web ACLs combine rules, priority ordering, managed rule groups, and default actions.
+- Supports multiple actions: **Allow, Block, Challenge, CAPTCHA, Count**.
+- Rate-based rules throttle excessive traffic by IP or custom keys.
+- Labels allow rule chaining, exclusions, and contextual decisions.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+### Recommended rule hierarchy
+1. IP allowlists/blocklists  
+2. Anti-DDoS managed rules  
+3. Rate-based limits  
+4. Anonymous/verified client checks  
+5. Core OWASP/CVE protections  
+6. Bot and fraud detection  
+7. Custom business rules (start in **Count** mode)
 
-#### Amazon Q Developer
+### Bot Control mechanisms
+- Recognizes benign vs. malicious bots using IP reputation, user agents, TLS fingerprints, browser checks, and telemetry.
+- Detects anomalies like token reuse, multi-IP hopping, or automation signatures.
+- Supports challenges (JS/Challenge/CAPTCHA) before enforcing block rules.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+---
 
-### Key Takeaways
+# Key Takeaways
 
-#### Design Mindset
+### Security Mindset
+- Treat internet exposure as a primary risk factor needing a layered, defense-in-depth approach.
+- Start with traffic observations (Count mode) before tightening enforcement.
+- Combine L3/L4 infrastructure defenses with granular L7 application firewalls.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+### Technical Architecture
+- CloudFront as the first line of defense reduces compute and bandwidth cost.
+- Use WAF labels, scoped-down rules, and managed groups to maintain precision.
+- Apply bot interrogation techniques for high-value endpoints like login or checkout.
 
-#### Technical Architecture
+### Strategy & Cost Management
+- Flat-rate CloudFront bundles simplify budgeting for startups and production systems.
+- Shield Advanced reduces both downtime and unexpected attack-related costs.
+- Incremental rollout + continuous monitoring ensures minimal disruption.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+---
 
-#### Modernization Strategy
+# Applying to Work
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Evaluate public exposure**: Identify all internet-facing endpoints and apply foundational WAF rules.
+- **Enable Bot Control** to protect login, search, and API routes from scraping and brute force.
+- **Adopt CloudFront** for edge filtering, performance improvement, and origin protection.
+- **Configure rate limiting** and leverage Shield where high availability is required.
+- **Pilot flat-rate plans** starting from Free/Pro, scaling to Business/Premium when workloads grow.
+- **Monitor via CloudWatch** to identify anomalies and iteratively refine rules.
 
-### Applying to Work
+---
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+# Event Experience
 
-### Event Experience
+Attending the **“Defense from Public Threat: AWS WAF & Application Protection”** workshop provided a complete and practical view of modern application security.
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+### Learning from AWS experts
+- Gained clarity on how global infrastructures (CloudFront PoPs, Route 53, edge networks) help defend at scale.
+- Real incidents and recent trends made the risks and mitigation strategies more tangible.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+### Hands-on exploration
+- Practiced creating rule groups, configuring rate-based protections, and setting up label-based exceptions.
+- Explored bot detection signals and compared challenge vs block strategies.
+- Understood how private origins with CloudFront add an additional protection layer.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+### Exploring new innovations
+- Flat-rate CloudFront bundles stood out as a significant shift—simplifying cost control while bundling security.
+- Learned techniques to optimize rules, reduce false positives, and manage premium rule costs with scope-down statements.
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+### Collaboration & Discussions
+- Discussions around incident handling, DDoS response, and rule tuning helped connect theory to real operations.
+- Reinforced the importance of phased validation before full enforcement.
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+### Lessons Learned
+- Automated and intelligent protection is essential as threat volume and complexity grow.
+- Monitoring traffic patterns before enforcing strict rules avoids operational disruptions.
+- Security and cost optimization can go hand-in-hand using CloudFront, Shield, and managed rules.
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+---
 
-#### Some event photos
-*Add your event photos here*  
+### Some event photos
+*Add your event photos here*
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the workshop strengthened my understanding of modern application security and equipped me with practical strategies to apply these defenses into real-world systems.
+

@@ -1,125 +1,152 @@
 ---
-title: "Event 2"
-date: "`r Sys.Date()`"
-weight: 1
-chapter: false
-pre: " <b> 4.2. </b> "
+title: "Event2"
+date: 2025-12-09T19:30:30+07:00
+draft: true
 ---
 
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Thông tin bên dưới chỉ dùng để tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
 {{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Báo Cáo Tóm Tắt: “Bảo vệ trước các mối đe dọa công khai: AWS WAF & Application Protection”
 
-### Mục Đích Của Sự Kiện
+### Mục tiêu sự kiện
+- Cung cấp tổng quan về các rủi ro bảo mật mà ứng dụng công khai thường gặp.
+- Giải thích cách AWS WAF hoạt động, cách thiết kế rule groups hiệu quả và cách giảm thiểu false positives.
+- Trình diễn AWS WAF Bot Control để nhận diện và chặn tự động hóa độc hại.
+- Giới thiệu các lớp phòng thủ DDoS của AWS Shield và những cải tiến mới như gói chi phí cố định (flat-rate bundles).
+- Giúp người tham dự hiểu cách xây dựng mô hình bảo vệ nhiều lớp bằng Route 53, CloudFront, WAF và Shield.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Diễn giả
+- **Các chuyên gia bảo mật AWS** – chuyên sâu về bảo mật ứng dụng và mạng (không công bố tên trong tài liệu nguồn).
 
-### Danh Sách Diễn Giả
+---
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+# Những Điểm Nổi Bật
 
-### Nội Dung Nổi Bật
+### Hiểu về các mối đe dọa Internet hiện đại
+- Endpoint công khai khiến ứng dụng dễ bị tấn công với tần suất cao, gây downtime, tăng chi phí và ảnh hưởng tuân thủ bảo mật.
+- Hậu quả có thể bao gồm tăng tiêu thụ tài nguyên, rò rỉ dữ liệu, credential stuffing, giảm niềm tin của khách hàng.
+- Các nhóm mối đe dọa chính:
+  - **Tấn công DoS/DDoS** ở tầng L3/L4 và L7.
+  - **Lỗ hổng ứng dụng**, bao gồm CVE phổ biến và OWASP Top 10.
+  - **Hoạt động bot**, từ scraping đến đánh cắp tài khoản, đặc biệt tăng mạnh bởi **bot dựa trên AI** (GPT, Claude, Meta AI).
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+### Xu hướng tấn công gia tăng
+- Dữ liệu gần đây cho thấy DDoS tăng đều qua từng năm.
+- Client dựa trên AI làm tăng đột biến lưu lượng tự động và khó đoán.
+- Giai đoạn 2021–2025 chứng kiến các hành vi tấn công ngày càng tinh vi.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+---
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+# Kiến trúc & Chiến lược bảo vệ
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+### Tăng cường an ninh biên bằng AWS
+- **Amazon Route 53**: DNS có tính sẵn sàng cao, kháng DDoS tốt.
+- **Amazon CloudFront**:
+  - Đóng vai trò reverse proxy, kết thúc TLS tại edge.
+  - Chặn tấn công từ sớm ở edge để giảm tải backend.
+  - Hỗ trợ private VPC origin để ẩn ALB/EC2 khỏi Internet công khai.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+### AWS Shield (Standard & Advanced)
+- Shield cung cấp lọc lưu lượng tầng mạng, bảo vệ SYN/UDP, và giảm thiểu dựa trên health metrics.
+- Shield Advanced bổ sung:
+  - Tự động tạo rule L7
+  - Bảo vệ chi phí khi autoscaling trong tấn công
+  - Hỗ trợ từ Shield Response Team (SRT)
 
-#### Domain-Driven Design (DDD)
+### Các gói CloudFront Flat-Rate mới
+- Gồm các mức giá cố định (Free, Pro, Business, Premium), bao gồm CDN + WAF + DDoS + DNS + logging + edge compute.
+- Giúp kiểm soát chi phí dễ dàng, tránh hóa đơn tăng bất ngờ khi gặp tấn công.
+- Lưu lượng bị WAF/Shield chặn **không tính vào quota sử dụng**.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+---
 
-#### Event-Driven Architecture
+# AWS WAF Deep Dive
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+### Cách WAF hoạt động
+- Web ACL gồm rule, thứ tự ưu tiên, managed rule groups và hành động mặc định.
+- Hỗ trợ các hành động: **Allow, Block, Challenge, CAPTCHA, Count**.
+- Rate-based rule giới hạn lưu lượng theo IP hoặc custom key.
+- Labels cho phép rule chaining, ngoại lệ và quyết định theo ngữ cảnh.
 
-#### Compute Evolution
+### Thứ tự rule khuyến nghị
+1. IP allowlists/blocklists  
+2. Anti-DDoS managed rules  
+3. Rate limiting  
+4. Kiểm tra client ẩn danh / xác thực  
+5. OWASP/CVE core protections  
+6. Bot & fraud detection  
+7. Custom business rules (bắt đầu ở **Count**)
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+### Bot Control
+- Phân biệt bot tốt/xấu dựa trên IP reputation, user agent, TLS fingerprint, kiểm tra browser và telemetry.
+- Phát hiện bất thường như token reuse, thay đổi IP nhanh, dấu hiệu automation.
+- Hỗ trợ Challenge/CAPTCHA trước khi Block.
 
-#### Amazon Q Developer
+---
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+# Key Takeaways
 
-### Những Gì Học Được
+### Tư duy bảo mật
+- Xem exposure Internet là rủi ro chính cần mô hình bảo vệ nhiều lớp.
+- Bắt đầu từ Count mode để quan sát trước khi áp dụng chặn.
+- Kết hợp phòng thủ L3/L4 với firewall L7 chi tiết.
 
-#### Tư Duy Thiết Kế
+### Kiến trúc kỹ thuật
+- CloudFront như tuyến phòng thủ đầu tiên giúp tối ưu chi phí compute & bandwidth.
+- Dùng labels, scope-down statements và managed groups để giảm false positives.
+- Dùng kỹ thuật interrogation bot cho các endpoint nhạy cảm (login, checkout).
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### Chiến lược & chi phí
+- Flat-rate bundle giúp dễ dự trù chi phí cho startup và hệ thống production.
+- Shield Advanced giảm downtime và chi phí phát sinh trong tấn công.
+- Triển khai theo từng giai đoạn + giám sát liên tục để đảm bảo ổn định.
 
-#### Kiến Trúc Kỹ Thuật
+---
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+# Áp dụng vào công việc
 
-#### Chiến Lược Hiện Đại Hóa
+- **Đánh giá mức độ công khai**: Xác định tất cả endpoint công khai và áp dụng rule cơ bản.
+- **Kích hoạt Bot Control** cho login, search và API quan trọng.
+- **Sử dụng CloudFront** để lọc lưu lượng tại edge và bảo vệ origin.
+- **Cấu hình rate limiting** và dùng Shield nếu yêu cầu availability cao.
+- **Thử nghiệm các gói flat-rate**, bắt đầu từ Free/Pro, nâng cấp khi workload tăng.
+- **Giám sát bằng CloudWatch** để phát hiện bất thường và tinh chỉnh rule liên tục.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+---
 
-### Ứng Dụng Vào Công Việc
+# Trải nghiệm sự kiện
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Tham gia workshop **“Defense from Public Threat: AWS WAF & Application Protection”** mang lại góc nhìn toàn diện và thực tiễn về bảo mật ứng dụng hiện đại.
 
-### Trải nghiệm trong event
+### Học từ chuyên gia AWS
+- Hiểu rõ cách hạ tầng toàn cầu (CloudFront PoPs, Route 53, edge network) phòng thủ quy mô lớn.
+- Các tình huống thực tế giúp hình dung rõ ràng hơn về rủi ro và cách giảm thiểu.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+### Thực hành
+- Tạo rule group, cấu hình rate-based rule, thiết lập ngoại lệ dựa trên labels.
+- Khám phá tín hiệu bot và so sánh challenge vs block.
+- Hiểu cách private origin trên CloudFront tăng thêm lớp bảo vệ.
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+### Tìm hiểu cải tiến mới
+- CloudFront flat-rate bundles là thay đổi đáng chú ý — đơn giản hóa chi phí trong khi tăng bảo mật.
+- Thực hành tối ưu rule, giảm false positives, và quản lý chi phí rule premium bằng scope-down.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+### Thảo luận & hợp tác
+- Thảo luận về xử lý sự cố, phản ứng DDoS, và tinh chỉnh rule giúp gắn lý thuyết với thực tiễn.
+- Nhấn mạnh tầm quan trọng của việc kiểm thử theo giai đoạn.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+### Bài học rút ra
+- Bảo vệ tự động, thông minh là cần thiết khi tấn công ngày càng phức tạp.
+- Quan sát lưu lượng trước khi enforce giúp tránh sự cố vận hành.
+- Kết hợp CloudFront, Shield và managed rules mang lại hiệu quả bảo mật & chi phí tối ưu.
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+---
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+### Một số hình ảnh sự kiện
+*Thêm hình ảnh của bạn tại đây*
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+> Nhìn chung, workshop giúp mình hiểu sâu hơn về bảo mật ứng dụng hiện đại và trang bị các chiến lược thực tiễn để áp dụng vào hệ thống thực tế.
+
+
