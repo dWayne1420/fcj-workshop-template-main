@@ -1,36 +1,73 @@
 ---
-title: "Chia sẻ, đóng góp ý kiến"
-date: "`r Sys.Date()`"
-weight: 7
+title: "Feedback & Reflection"
+date: 2025-12-08
+weight: 1
 chapter: false
-pre: " <b> 7. </b> "
+pre: "<b> 7. </b>"
 ---
 
+# Chia sẻ & Đóng góp Ý kiến  
 
-### Đánh giá chung
+## 1. Đánh giá chung
 
-**1. Môi trường làm việc**  
-Môi trường làm việc thân thiện và tốt . Các thành viên FCJ nhiệt tình ,luôn sẵn sàng giúp đỡ tôi mỗi lúc thắc mắc và học hỏi . không gian làm việc thoải mái , gọn gàng . Mong sau này sẽ có những buổi giao lưu hoặc hoạt động ngoài để giúp kết nối dễ hơn.
+### **1.1. Môi trường làm việc**
+Môi trường làm việc tại AWS rất chuyên nghiệp, thân thiện và cởi mở. Các anh chị luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc hiện đại, quy trình rõ ràng giúp mình dễ tập trung và hòa nhập.  
+Tuy nhiên, mình nghĩ AWS có thể tổ chức thêm các hoạt động internal hoặc team bonding để tăng sự kết nối giữa thực tập sinh và nhân sự chính thức.
 
+### **1.2. Sự hỗ trợ của mentor / team admin**
+Mentor hướng dẫn chi tiết, giải thích rõ ràng và luôn khuyến khích mình tự nghiên cứu thay vì đưa đáp án trực tiếp.  
+Team admin hỗ trợ đầy đủ về tài liệu, tài khoản training, thời gian và các thủ tục liên quan, giúp mình yên tâm tập trung học tập và thực hành.
 
-**2. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong thời gian thực tập , tôi biết thêm rất nhiều những dịch vụ và công cụ tuyêt vời , phát triển khả năng kỹ luật , làm quen không gian làm việc ,nâng cao kỹ năng giao tiếp và làm việc nhóm. Có nhiều cơ hội để nghe người hướng dẫn và các buổi sự kiện tuyệt vời chia sẽ về kinh nghiệm ,bài học quý giá giúp tôi định hướng tốt cho tương lai.
+### **1.3. Sự phù hợp giữa công việc và chuyên ngành học**
+Các nhiệm vụ liên quan trực tiếp đến cloud computing, bảo mật, networking và DevOps — đều phù hợp với chuyên ngành của mình.  
+Thực tập tại AWS giúp mình áp dụng kiến thức học ở trường vào môi trường thực tế, nhất là khi làm lab về kiến trúc hệ thống và bảo mật.
 
+### **1.4. Cơ hội học hỏi & phát triển kỹ năng**
+Trong kỳ thực tập, mình học được nhiều kỹ năng giá trị như:
 
-**3. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty cho thời gian làm việc linh hoạt, được tham dự những buổi sự kiện và tăng cường , được nghe những con người tài giỏi ,nhiệt huyết  giúp nâng cao và hiểu biết thêm về các công cụ và cũng như  giải đáp những thắc mắc của thực tập viên..
+- Sử dụng AWS services (EC2, S3, CloudFront, IAM, WAF, Shield, Lambda…)
+- Tư duy xây dựng kiến trúc bền vững & tối ưu chi phí
+- Kỹ năng teamwork, communication và problem-solving
+- Kỹ năng viết báo cáo, tổng hợp thông tin, trình bày chuyên nghiệp
+- Tư duy bảo mật, DevOps và tự động hóa
 
-**4. Người hướng dẫn và đội hỗ trợ**
-Người hướng dẫn nhiệt tình ,tâm huyết dày kinh nghiệm . đội ngũ hỗ trợ luôn cố gắng và sản sàng giúp đỡ , tạo điều kiện thuận lợi và môi trường làm việc thoải mái,  giải quyết vấn và các câu hỏi nghiêm túc. 
+Mentor chia sẻ nhiều kinh nghiệm thực tế giúp mình có định hướng rõ hơn cho sự nghiệp.
 
+### **1.5. Văn hóa & tinh thần đồng đội**
+AWS có văn hóa làm việc rất tích cực: tôn trọng, minh bạch, chủ động, học hỏi liên tục.  
+Khi có nhiệm vụ gấp, mọi người hỗ trợ nhau hết mình, không phân biệt vai trò hay thâm niên. Điều này giúp mình cảm thấy mình thực sự là một phần của team, dù chỉ là thực tập sinh.
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?
-- Môi trường làm việc , các dịch vụ,công cụ và những buổi chia sẽ kiến thức ,kinh nghiệm 
+### **1.6. Chính sách / phúc lợi cho thực tập sinh**
+AWS hỗ trợ tài khoản học tập, tài liệu training, lịch làm việc linh hoạt và nhiều buổi workshop nội bộ.  
+Đây đều là những phúc lợi thiết thực giúp thực tập sinh học nhanh, nắm chắc kiến thức và có cơ hội phát triển bản thân.
 
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?
-- Nếu có giới thiệu bạn bè thực tập ở đây tôi sẽ khuyên họ nên tự tin trao đỗi , học hỏi nhiều hơn và tự giác học tập , sắp sếp thời gian của mình
+---
 
-- Bởi vì trong công ty có nhiều cơ hội và kiến thức và có những con người tuyệt vời , nhiệt huyết với công việc , sự học hỏi không ngừng lẫn nhau . Thực tập ở công ty bạn sẽ ngạc nhiên về môi trường làm việc cũng như những người hướng dẫn của mình
+## 2. Một số câu hỏi khác
 
+### **Điều bạn hài lòng nhất trong thời gian thực tập?**
+Điều mình hài lòng nhất là được tiếp xúc trực tiếp với môi trường cloud thực tế, được mentor hỗ trợ sát sao và được làm các bài lab thực chiến. Môi trường học tập rõ ràng, chuyên nghiệp và rất truyền cảm hứng.
 
+### **Điều bạn nghĩ công ty cần cải thiện cho các thực tập sinh sau?**
+Có thể bổ sung thêm các mini project theo nhóm và các buổi thực hành chuyên sâu theo chủ đề như bảo mật nâng cao, serverless, containers…
+
+### **Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không?**
+Chắc chắn có.  
+Vì AWS là môi trường lý tưởng để học cloud từ cơ bản tới chuyên sâu, phù hợp cho các bạn hướng tới cloud engineer, security, DevOps hoặc backend.
+
+---
+
+## 3. Đề xuất & Mong muốn
+
+### **Bạn có đề xuất gì để cải thiện trải nghiệm thực tập?**
+- Tăng thêm workshop technical chuyên sâu  
+- Tổ chức hackathon hoặc weekly challenge  
+- Tạo nhiều hoạt động kết nối giữa các team / thực tập sinh  
+
+### **Bạn có muốn tiếp tục chương trình trong tương lai?**
+Có, vì môi trường AWS giúp mình phát triển nhanh về kỹ thuật lẫn mindset.
+
+### **Góp ý khác **
+Thời gian thực tập tại AWS là trải nghiệm quý giá, giúp mình nâng cao kỹ năng và định hướng rõ ràng hơn về nghề nghiệp. Mình rất biết ơn cơ hội này và hy vọng có thể đồng hành cùng AWS trong hành trình tiếp theo.
+
+---
