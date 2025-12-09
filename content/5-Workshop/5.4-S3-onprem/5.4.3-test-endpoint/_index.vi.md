@@ -1,7 +1,7 @@
 ---
 title : "Kiểm tra Interface Endpoint"
-date : "`r Sys.Date()`"
-weight : 3
+date : "2025-12-09"
+weight : 5
 chapter : false
 pre : " <b> 5.4.3 </b> "
 ---

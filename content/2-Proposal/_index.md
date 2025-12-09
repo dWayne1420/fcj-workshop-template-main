@@ -123,8 +123,7 @@ CI/CD is managed through GitLab → CodePipeline → CodeBuild.
 ---
 
 ### 6. Budget Estimation  
-You can see the cost on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)
-Or download the [budget estimate file](../attachments/budget_estimation.pdf).
+You can see the cost on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?utm_source=chatgpt.com&id=a62b25b1224a8ff06a28ffec74d5d881f848a64b).
 
 | AWS Service | Monthly Cost |
 |-------------|--------------|

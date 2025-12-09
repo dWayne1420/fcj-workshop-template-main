@@ -121,8 +121,7 @@ CI/CD triển khai theo chuỗi GitLab → CodePipeline → CodeBuild.
 
 ### 6. Ước tính chi phí (Budget Estimation) 
 
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?utm_source=chatgpt.com&id=a62b25b1224a8ff06a28ffec74d5d881f848a64b).  
 
 | Dịch vụ | Chi phí/tháng |
 |--------|----------------|

@@ -1,9 +1,9 @@
 ---
 title : "Access S3 from VPC"
-date : "`r Sys.Date()`"
-weight : 3
+date : "2025-12-09"
+weight : 5
 chapter : false
-pre : " <b> 5.3. </b> "
+pre : " <b> 5.3.2. </b> "
 ---
 
 #### Using Gateway endpoint

@@ -1,7 +1,7 @@
 ---
 title : "Tạo một S3 Interface endpoint"
-date : "`r Sys.Date()`"
-weight : 2
+date : "2025-12-09"
+weight : 5
 chapter : false
 pre : " <b> 5.4.2 </b> "
 ---
