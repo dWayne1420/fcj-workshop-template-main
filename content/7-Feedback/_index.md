@@ -57,7 +57,7 @@ Because AWS is an ideal environment to learn cloud from basic to advanced levels
 - Create more activities connecting teams / interns
 
 ### **Do you want to continue the program in the future?**
-Yes, because the AWS environment helps me develop quickly in both technical skills and mindset.
+Yes, because the AWS environment helps me develop quickly in technical skills.
 
 ### **Other Feedback**
 The internship at AWS is a valuable experience, helping me enhance skills and have a clearer career direction. I am very grateful for this opportunity and hope to continue collaborating with AWS in the next journey.

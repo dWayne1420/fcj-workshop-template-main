@@ -65,7 +65,7 @@ Vì AWS là môi trường lý tưởng để học cloud từ cơ bản tới c
 - Tạo nhiều hoạt động kết nối giữa các team / thực tập sinh  
 
 ### **Bạn có muốn tiếp tục chương trình trong tương lai?**
-Có, vì môi trường AWS giúp mình phát triển nhanh về kỹ thuật lẫn mindset.
+Có, vì môi trường AWS giúp mình phát triển nhanh kỹ thuật .
 
 ### **Góp ý khác **
 Thời gian thực tập tại AWS là trải nghiệm quý giá, giúp mình nâng cao kỹ năng và định hướng rõ ràng hơn về nghề nghiệp. Mình rất biết ơn cơ hội này và hy vọng có thể đồng hành cùng AWS trong hành trình tiếp theo.
