@@ -1,5 +1,5 @@
 ---
-title: "Event4"
+title: "Event 4"
 date: 2025-11-17
 draft: true
 pre: " <b> 4.4. </b> "
