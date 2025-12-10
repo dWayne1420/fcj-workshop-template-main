@@ -15,7 +15,9 @@ pre: " <b> 4.3. </b> "
 - Giúp sinh viên áp dụng kiến thức vào các dự án thực tập hoặc nghiên cứu cá nhân, nâng cao năng lực kỹ thuật.  
 
 ### Diễn giả
--  
+-  **Danh Hoang Huu Nghi** - AI Engineer | Renova Cloud
+-  **Dinh Le Hoang Anh** - Cloud Engineer | First Cloud AI Journey
+-  **Lam Tuan Kiet** - Sr DevOps Engineer | FPT Software
 
 ---
 

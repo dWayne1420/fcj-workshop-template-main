@@ -17,8 +17,8 @@ pre: " <b> 4.2. </b> "
 
 ### Speakers
 
-- Nguyen Gia Hung
-- Julian Ju
+- **Nguyen Gia Hung**
+- **Julian Ju**
 
 ---
 

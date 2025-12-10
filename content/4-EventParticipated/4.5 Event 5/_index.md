@@ -22,6 +22,10 @@ chapter: false
 - Deep dive into the **Shared Responsibility Model**  
 - Review of common cloud threats in Vietnam (data exposure, weak IAM, misconfigurations)
 
+### Speakers
+-  **Tran Duc Anh**
+-  **Nguyen Tuan Thinh** 
+-  **Nguyen Do Thanh Dat** 
 ---
 
 ##  Pillar 1 — Identity & Access Management (IAM)

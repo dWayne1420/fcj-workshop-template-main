@@ -21,6 +21,11 @@ chapter: false
 - Giải thích sâu về **Mô hình Trách nhiệm Chia sẻ (Shared Responsibility)**  
 - Các mối đe dọa cloud phổ biến tại Việt Nam (S3 lộ dữ liệu, IAM yếu, cấu hình sai)
 
+### Diễn giả
+-  **Tran Duc Anh**
+-  **Nguyen Tuan Thinh** 
+-  **Nguyen Do Thanh Dat** 
+
 ---
 
 ## Pillar 1 — Identity & Access Management (IAM)

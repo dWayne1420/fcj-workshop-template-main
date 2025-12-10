@@ -15,7 +15,10 @@ pre: " <b> 4.3. </b> "
 - Help students apply knowledge to internship projects or personal research, enhancing technical skills.  
 
 ### Speakers
--  
+-  **Danh Hoang Huu Nghi** - AI Engineer | Renova Cloud
+-  **Dinh Le Hoang Anh** - Cloud Engineer | First Cloud AI Journey
+-  **Lam Tuan Kiet** - Sr DevOps Engineer | FPT Software
+
 
 ---
 
