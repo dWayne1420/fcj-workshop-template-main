@@ -1,6 +1,6 @@
 ---
 title: "Event 3"
-date: 2025-11-15
+date: "2025-11-15"
 weight: 3
 draft: true
 pre: " <b> 4.3. </b> "
