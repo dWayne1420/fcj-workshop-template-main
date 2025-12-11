@@ -22,4 +22,4 @@ After the process completes, the built file will appear in the directory:
 /target/<application-name>.jar
 ```
 
-![](/images/2-Proposal/target.jpg)
+![](/static/images/2-Proposal/target.jpg)
