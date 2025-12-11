@@ -2,7 +2,7 @@
 title: "Event 3"
 date: "2025-11-15"
 weight: 3
-draft: true
+chapter: false
 pre: " <b> 4.3. </b> "
 ---
 

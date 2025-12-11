@@ -3,6 +3,7 @@ title: "Event5"
 date: "2025-11-29"
 weight: 5
 chapter: false
+pre: " <b> 4.5. </b> "
 ---
 
 # Báo cáo tổng hợp: “AWS Well-Architected – Security Pillar Workshop”
