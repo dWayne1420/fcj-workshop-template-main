@@ -77,9 +77,7 @@ CI/CD triển khai theo chuỗi GitLab → CodePipeline → CodeBuild.
 - CloudWatch giám sát hệ thống  
 
 ---
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
-
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![Kiến Trúc](/static/images/2-Proposal/anh1.jpg)
 
 
 ### 4. Triển khai kỹ thuật (Technical Implementation)  
