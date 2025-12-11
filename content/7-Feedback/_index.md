@@ -50,14 +50,4 @@ Definitely yes.
 Because AWS is an ideal environment to learn cloud from basic to advanced levels, suitable for those aiming to be cloud engineers, security, DevOps, or backend developers.
 
 ---
-## 3. Suggestions & Wishes
-### **Do you have any suggestions to improve the internship experience?**
-- Increase technical workshops in depth
-- Organize hackathons or weekly challenges
-- Create more activities connecting teams / interns
 
-### **Do you want to continue the program in the future?**
-Yes, because the AWS environment helps me develop quickly in technical skills.
-
-### **Other Feedback**
-The internship at AWS is a valuable experience, helping me enhance skills and have a clearer career direction. I am very grateful for this opportunity and hope to continue collaborating with AWS in the next journey.
