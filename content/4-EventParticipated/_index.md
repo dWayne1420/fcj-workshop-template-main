@@ -6,20 +6,6 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference only.  
-Please **do not copy it verbatim** into your official report, including this warning notice.
-{{% /notice %}}
-
-> This section documents the events you have participated in throughout your internship.  
-> Each event includes:
-> - Event name  
-> - Date & time  
-> - Location  
-> - Your role  
-> - Description of key content  
-> - Experience, lessons learned, and value gained  
-
 ---
 
 ## [Event 1 – GenAI-powered App-DB Modernization Workshop](4.1-Event1/)

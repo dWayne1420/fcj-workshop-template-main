@@ -6,20 +6,6 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin bên dưới chỉ mang tính chất tham khảo.  
-Vui lòng **không sao chép nguyên văn** vào báo cáo chính thức, bao gồm cả phần lưu ý này.
-{{% /notice %}}
-
-> Phần này ghi lại toàn bộ các sự kiện bạn đã tham gia trong quá trình internship.  
-> Mỗi sự kiện bao gồm:
-> - Tên sự kiện  
-> - Ngày & giờ  
-> - Địa điểm  
-> - Vai trò  
-> - Mô tả nội dung chính  
-> - Trải nghiệm, bài học rút ra và giá trị nhận được  
-
 ---
 
 ## [Sự kiện 1 – GenAI-powered App-DB Modernization Workshop](4.1-Event1/)
