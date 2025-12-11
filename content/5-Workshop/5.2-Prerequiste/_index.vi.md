@@ -22,4 +22,4 @@ Sau khi hoàn tất, file build xuất hiện trong thư mục:
 /target/<ten-ung-dung>.jar
 ```
 
-![](/images/2-Proposal/target.jpg)
+![](/static/images/2-Proposal/target.jpg)
