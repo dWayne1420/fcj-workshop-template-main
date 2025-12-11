@@ -12,7 +12,7 @@ pre: " <b> 4.5. </b> "
 
 - Understand the **five pillars** of the AWS Security Framework  
 - Learn best practices for IAM, detection, data protection, and incident response  
-- Explore prevention strategies for cloud threats commonly seen in Vietnam  
+- Explore prevention strategies for cloud threats commonly seen
 - Practice real-world simulations including IAM policy validation and detection workflows  
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Event5"
+title: "Event 5"
 date: "2025-11-29"
 weight: 5
 chapter: false
@@ -12,7 +12,7 @@ pre: " <b> 4.5. </b> "
 
 - Hiểu mô hình **5 trụ cột bảo mật** trong AWS Well-Architected  
 - Nắm các best practice về IAM, detection, data protection và incident response  
-- Tìm hiểu chiến lược phòng tránh các mối đe dọa cloud phổ biến tại Việt Nam  
+- Tìm hiểu chiến lược phòng tránh các mối đe dọa cloud phổ biến  
 - Trải nghiệm demo thực tế như kiểm tra IAM Policy và hệ thống cảnh báo  
 
 ## Nền tảng bảo mật
