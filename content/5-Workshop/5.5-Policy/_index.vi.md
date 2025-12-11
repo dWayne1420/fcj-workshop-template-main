@@ -14,7 +14,7 @@ Sau khi triển khai thành công, Elastic Beanstalk cung cấp URL dạng:
 http://<environment-id>.<region>.elasticbeanstalk.com
 ```
 
-![Ví dụ](/images/2-Proposal/domain.jpg)
+![Ví dụ](/static/images/2-Proposal/domain.jpg)
 
 Sử dụng URL này để gửi yêu cầu từ Postman đến API Spring Boot.
 Ví dụ:
@@ -23,6 +23,6 @@ Ví dụ:
 GET http://<env>.elasticbeanstalk.com/api/hello
 ```
 
-![ví dụ](/images/2-Proposal/postman.jpg)
+![ví dụ](/static/images/2-Proposal/postman.jpg)
 
 Nếu API phản hồi đúng dữ liệu, việc triển khai coi như hoàn tất.

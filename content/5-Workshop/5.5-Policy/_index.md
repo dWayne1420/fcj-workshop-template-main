@@ -14,7 +14,7 @@ After the deployment succeeds, Elastic Beanstalk provides a URL in the format:
 http://<environment-id>.<region>.elasticbeanstalk.com
 ```
 
-![Example](/images/2-Proposal/domain.jpg)
+![Example](/static/images/2-Proposal/domain.jpg)
 
 Use this URL to send requests from Postman to the Spring Boot API.
 
@@ -24,6 +24,6 @@ Example:
 GET http://<env>.elasticbeanstalk.com/api/hello
 ```
 
-![Example](/images/2-Proposal/postman.jpg)
+![Example](/static/images/2-Proposal/postman.jpg)
 
 If the API responds with the expected data, the deployment is considered successful.

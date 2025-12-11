@@ -15,7 +15,7 @@ Thực hiện:
 - Đặt **Version label** (ví dụ: `v1-initial`).
 - Xác nhận triển khai.
 
-![](/images/2-Proposal/Upload.jpg)
+![](/static/images/2-Proposal/Upload.jpg)
 
 Elastic Beanstalk sẽ tự động thực hiện:
 
