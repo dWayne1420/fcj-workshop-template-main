@@ -42,9 +42,6 @@ These are practical benefits that help interns learn quickly, grasp knowledge th
 ### **What are you most satisfied with during the internship?**
 I am most satisfied with being directly exposed to a real cloud environment, receiving close mentor support, and doing practical labs. The learning environment is clear, professional, and very inspiring.
 
-### **What do you think the company should improve for future interns?**
-It could add more mini projects in groups and deeper practical sessions on specific topics such as advanced security, serverless, containers…
-
 ### **If recommending to friends, would you advise them to intern here?**
 Definitely yes.  
 Because AWS is an ideal environment to learn cloud from basic to advanced levels, suitable for those aiming to be cloud engineers, security, DevOps, or backend developers.

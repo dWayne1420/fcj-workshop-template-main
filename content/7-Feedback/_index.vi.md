@@ -48,9 +48,6 @@ AWS hỗ trợ tài khoản học tập, tài liệu training, lịch làm việ
 ### **Điều bạn hài lòng nhất trong thời gian thực tập?**
 Điều mình hài lòng nhất là được tiếp xúc trực tiếp với môi trường cloud thực tế, được mentor hỗ trợ sát sao và được làm các bài lab thực chiến. Môi trường học tập rõ ràng, chuyên nghiệp và rất truyền cảm hứng.
 
-### **Điều bạn nghĩ công ty cần cải thiện cho các thực tập sinh sau?**
-Có thể bổ sung thêm các mini project theo nhóm và các buổi thực hành chuyên sâu theo chủ đề như bảo mật nâng cao, serverless, containers…
-
 ### **Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không?**
 Chắc chắn có.  
 Vì AWS là môi trường lý tưởng để học cloud từ cơ bản tới chuyên sâu, phù hợp cho các bạn hướng tới cloud engineer, security, DevOps hoặc backend.
