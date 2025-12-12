@@ -15,7 +15,7 @@ Proceed with:
 - Setting a **Version label** (e.g., `v1-initial`)
 - Confirming the deployment
 
-  ![](/static/images/2-Proposal/Upload.jpg)
+  ![](images/2-Proposal/Upload.jpg)
 
 Elastic Beanstalk will automatically:
 

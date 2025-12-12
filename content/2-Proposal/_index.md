@@ -79,7 +79,7 @@ CI/CD is managed through GitLab → CodePipeline → CodeBuild.
 
 ---
 
-![Architecture](/static/images/2-Proposal/anh1.jpg)
+![Architecture](images/2-Proposal/anh1.jpg)
 
 
 

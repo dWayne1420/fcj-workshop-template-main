@@ -77,7 +77,7 @@ CI/CD triển khai theo chuỗi GitLab → CodePipeline → CodeBuild.
 - CloudWatch giám sát hệ thống  
 
 ---
-![Kiến Trúc](/static/images/2-Proposal/anh1.jpg)
+![Kiến Trúc](/images/2-Proposal/anh1.jpg)
 
 
 ### 4. Triển khai kỹ thuật (Technical Implementation)  
