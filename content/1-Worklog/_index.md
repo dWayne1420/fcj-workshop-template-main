@@ -39,32 +39,32 @@ production-ready level.
   depending on complexity.
 
 ## Weekly Summary
-- [**Week 1 — AWS Foundations:**](/content/1-Worklog/1.1-Week1/) Created Free Tier account, built IAM baseline,  
+- [**Week 1 — AWS Foundations:**](1.1-Week1/) Created Free Tier account, built IAM baseline,  
   installed Hugo, explored Console, configured AWS Budgets and AWS CLI.  
-- [**Week 2 — IAM & VPC:**](/content/1-Worklog/1.2-Week2/) Managed IAM (users/groups/roles/policies), built VPC  
+- [**Week 2 — IAM & VPC:**](1.2-Week2/) Managed IAM (users/groups/roles/policies), built VPC  
   (public/private subnets), configured SGs & NACLs, deployed EC2, studied  
   site-to-site VPN.  
-- [**Week 3 — EC2 Advanced & LAMP/Node.js:**](/content/1-Worklog/1.3-Week3/) Explored EC2 internals, installed  
+- [**Week 3 — EC2 Advanced & LAMP/Node.js:**](1.3-Week3/) Explored EC2 internals, installed  
   LAMP stack, deployed Node.js apps, implemented IAM cost governance.  
-- [**Week 4 — S3 & CloudFront:**](/content/1-Worklog/1.4-Week4/) Managed S3 buckets, hosted static website,  
+- [**Week 4 — S3 & CloudFront:**](1.4-Week4/) Managed S3 buckets, hosted static website,  
   integrated CloudFront, enabled versioning, lifecycle rules, CRR.  
-- [**Week 5 — RDS / Lightsail / DynamoDB / SDK:**](/content/1-Worklog/1.5-Week5/) Deployed RDS, Lightsail  
+- [**Week 5 — RDS / Lightsail / DynamoDB / SDK:**](1.5-Week5/) Deployed RDS, Lightsail  
   database, Lightsail containers, learned DynamoDB, wrote scripts using AWS SDK.  
-- [**Week 6 — Architecture & Database Design:**](/content/1-Worklog/1.6-Week6/) Researched AWS services, designed  
+- [**Week 6 — Architecture & Database Design:**](1.6-Week6/) Researched AWS services, designed  
   full architecture, created ERD/schema, completed technical documentation.  
-- [**Week 7 — CloudWatch / SNS / SQS:**](/content/1-Worklog/1.7-Week7/) Configured logs, metrics, dashboards,  
+- [**Week 7 — CloudWatch / SNS / SQS:**](1.7-Week7/) Configured logs, metrics, dashboards,  
   alarms; integrated SNS; built SQS workflows.  
-- [**Week 8 — Elastic Beanstalk & Auto Scaling:**](/content/1-Worklog/1.8-Week8/) Deployed multi-tier app on EB,  
+- [**Week 8 — Elastic Beanstalk & Auto Scaling:**](1.8-Week8/) Deployed multi-tier app on EB,  
   configured ALB, Auto Scaling, deployment lifecycle.  
-- [**Week 9 — Serverless (Lambda & API Gateway):**](/content/1-Worklog/1.9-Week9/) Built Lambda functions,  
+- [**Week 9 — Serverless (Lambda & API Gateway):**](1.9-Week9/) Built Lambda functions,  
   created REST APIs, integrated with S3/DynamoDB/SNS/EventBridge, configured IAM  
   for serverless.  
-- [**Week 10 — CI/CD (CodeCommit/CodeBuild/CodeDeploy/CodePipeline):**](/content/1-Worklog/1.10-Week10/) Built full  
+- [**Week 10 — CI/CD (CodeCommit/CodeBuild/CodeDeploy/CodePipeline):**](1.10-Week10/) Built full  
   CI/CD pipeline, wrote `buildspec.yml` and `appspec.yml`, tested end-to-end flow.  
-- [**Week 11 — Containers (Docker, ECR, ECS, Fargate):**](/content/1-Worklog/1.11-Week11/) Created Docker images,  
+- [**Week 11 — Containers (Docker, ECR, ECS, Fargate):**](1.11-Week11/) Created Docker images,  
   pushed to ECR, deployed via ECS EC2/Fargate, configured networking &  
   auto-scaling.  
-- [**Week 12 — Final Deployment & Optimization:**](/content/1-Worklog/1.12-Week12/) Deployed final project,  
+- [**Week 12 — Final Deployment & Optimization:**](1.12-Week12/) Deployed final project,  
   integrated monitoring and CI/CD, optimized performance/cost/security,  
   performed load tests, completed full documentation.
 
